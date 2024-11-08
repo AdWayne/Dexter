@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тіркеу Формасы</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #141414;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            text-align: center;
+            background: linear-gradient(90deg, #000000, #590000);
+            padding: 40px;
+            color: #e50914;
+            font-family: 'Impact', sans-serif;
+            font-size: 3em;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+        }
+        form {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #1c1c1c;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: none;
+        }
+        input[type="radio"], input[type="checkbox"] {
+            width: auto;
+            margin: 0 10px 0 0;
+        }
+        input[type="submit"], input[type="reset"] {
+            background-color: #e50914;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover, input[type="reset"]:hover {
+            background-color: #b20710;
+        }
+        label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<header>Тіркеу формасы</header>
+<form action="Login and parol.html">
+    <label>Аты:</label>
+    <input type="text" placeholder="Атыңызды енгізіңіз" required>
+
+    <label>Тегі:</label>
+    <input type="text" placeholder="Тегіңізді енгізіңіз" required>
+
+    <label>Email:</label>
+    <input type="email" placeholder="Email енгізіңіз" required>
+
+    <label>Құпия сөз:</label>
+    <input type="password" placeholder="Құпия сөзді енгізіңіз" required>
+
+    <label>Жынысы:</label>
+    <input type="radio" name="gender" value="male"> Ер
+    <input type="radio" name="gender" value="female"> Әйел
+    <input type="radio" name="gender" value="other"> Басқа
+  
+    <br><br>
+    <label>Жасы:</label>
+    <input type="number" placeholder="Жасыңызды енгізіңіз" max="80" required>
+
+    <label>Қалаулары:</label><br>
+    <input type="checkbox" value="serial kory"> Сериал көру<br>
+    <input type="checkbox" value="kino kory"> Кино көру<br>
+    <input type="checkbox" value="anime kory"> Аниме көру<br>
+    <br>
+    <label>Мамандығыңызды таңдаңыз:</label>
+    <select>
+        <option value="student">Студент</option>
+        <option value="employed">Жұмыста</option>
+        <option value="self-employed">Өзін-өзі жұмыспен қамтыған</option>
+        <option value="unemployed">Жұмыссыз</option>
+    </select>
+
+    <label>Өзіңіз туралы:</label>
+    <textarea rows="4" placeholder="Өзіңіз туралы бірнеше жол жазыңыз..."></textarea>
+
+    <div class="form-group">
+        <label for="profile-photo">Суреттіңізді енгізіңіз: </label>
+        <input type="file" id="profile-photo" name="profile-photo" accept=".jpg, .jpeg, .webp" required>
+    </div>
+
+    <div class="form-group">
+        <input type="checkbox" id="terms" name="terms" required>
+        <label for="terms" class="checkbox-label">Мен <a href="terms of use.html" class="terms-link"> ережемен келісемін</a></label>
+    </div>
+
+    <input type="reset" value="Қайта орнату">
+    <input type="submit" value="Жіберу">
+</form>
+</body>
+</html>
