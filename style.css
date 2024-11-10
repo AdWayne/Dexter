@@ -211,7 +211,7 @@ iframe {
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
-@media (max-width: 640px) {
+@media (max-width: 1024px) {
     body {
         overflow: scroll;
         font-family: 'Roboto', sans-serif;
