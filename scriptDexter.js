@@ -137,21 +137,25 @@ const progressBars = document.querySelectorAll('.progress');
   });
 
   progressBars.forEach((bar) => observer.observe(bar));
+  function openShareLinks() {
+    const siteUrl = "https://adwayne.github.io/Dexter/";
+    const encodedUrl = encodeURIComponent(siteUrl);
 
-function openShareLinks() {
-    const urls = [
-      "https://www.facebook.com",
-      "https://www.twitter.com",
-      "https://www.linkedin.com",
-      "https://plus.google.com",
-      "https://www.whatsapp.com",
-      "https://www.instagram.com"
-    ];
-    
-    urls.forEach((url) => {
-      window.open(url, "_blank");
-    });
-}
+    const urls = {
+      facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
+      twitter: `https://twitter.com/intent/tweet?url=${encodedUrl}&text=Check+this+out!`,
+      linkedin: `https://www.linkedin.com/shareArticle?mini=true&url=${encodedUrl}`,
+      whatsapp: `https://api.whatsapp.com/send?text=${encodedUrl}`,
+    };
+
+    for (const platform in urls) {
+      if (urls[platform]) {
+        window.open(urls[platform], "_blank");
+      }
+    }
+  }
+
+  document.getElementById("shareButton").addEventListener("click", openShareLinks);
 
 updateVideoCategory();
 changeVideo();
