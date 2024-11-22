@@ -62,24 +62,9 @@ body {
     text-decoration: underline;
   }
 
-  #welcome-message {
-    margin-top: 20px;
-    color: #fff;
-    font-size: 1.5em;
-  }
 
-  #loading {
-    display: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  #loading img {
-    position: relative;
-    top: -100px;
-    width: 304px;
-    height: 105px;
-    margin-left: 3px;
-  }
+@media (max-width: 900px) {
+    .login-container {
+        width: 100%;
+    }
+}
