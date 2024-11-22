@@ -136,23 +136,31 @@ const observer = new IntersectionObserver((entries) => {
 
 progressBars.forEach((bar) => observer.observe(bar));
 
-function openShareLinks() {
+function openShareLink(platform) {
     const siteUrl = "https://adwayne.github.io/Dexter/";
     const encodedUrl = encodeURIComponent(siteUrl);
 
-  const urls = {
-    facebook: `https://www.facebook.com/sharer/sharer.php?u=https://adwayne.github.io/Dexter/`,
-    twitter: `https://twitter.com/intent/tweet?url=https://adwayne.github.io/Dexter/&text=Check+this+out!`,
-    linkedin: `https://www.linkedin.com/shareArticle?mini=true&url=https://adwayne.github.io/Dexter/`,
-    whatsapp: `https://api.whatsapp.com/send?text=https://adwayne.github.io/Dexter/`,
-};
+    const urls = {
+        facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
+        twitter: `https://twitter.com/intent/tweet?url=${encodedUrl}&text=Check+this+out!`,
+        linkedin: `https://www.linkedin.com/shareArticle?mini=true&url=${encodedUrl}`,
+        whatsapp: `https://api.whatsapp.com/send?text=${encodedUrl}`,
+    };
 
-    Object.values(urls).forEach((url) => {
-        if (url) window.open(url, "_blank");
-    });
+    const url = urls[platform];
+    if (url) {
+        window.open(url, "_blank", "noopener,noreferrer");
+    }
 }
 
-document.getElementById("shareButton").addEventListener("click", openShareLinks);
+document.querySelector(".share-menu").addEventListener("click", (event) => {
+    if (event.target.tagName === "A") {
+        const platform = event.target.getAttribute("data-platform");
+        openShareLink(platform);
+        event.preventDefault();
+    }
+});
+
 
 updateVideoCategory();
 changeVideo();
