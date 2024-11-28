@@ -128,10 +128,10 @@ const videosBySeason = [
         "https://mega.nz/embed/xwYFiLBB#WVygkeZc8cWuQUTl8UR3LfY88XVgMQYnTlIJOHwxyOQ",
         "",
         "",
-        "",
-        "",
-        "",
-        "",
+        "https://mega.nz/embed/w2URESiZ#8mm93dMYoifiZtgGBtYQamQuuOeYvb-SiEvAal_eY9M",
+        "https://mega.nz/embed/Qrs1nJbZ#OJHg2Iwhw9xlw-59iq50BdRRdaBmT7bW_Srdlp8bKOc",
+        "https://mega.nz/embed/M30TUAoQ#ftMOQfUjzftZ3bYtGVy0dtxCDZtE626D8SzdkM-sYW8",
+        "https://mega.nz/embed/B2cnCTBJ#zhhgLK95s9h0SahN-_RMtAMct2GBswk29LcbK7n7Ahc",
     ],
 ];
 
