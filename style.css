@@ -8,9 +8,16 @@ body {
   line-height: 1.6;
   max-width: 100%;
 }
+
 .rating-container {
-  width: 80%;
-  margin: 20px auto;
+    width: 80%;
+    max-width: 900px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #1a1a1a;
+    border: 1px solid #2c2c2c;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 h1 {
