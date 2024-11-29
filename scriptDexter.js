@@ -248,6 +248,17 @@ document.querySelector(".share-menu").addEventListener("click", (event) => {
     }
 });
 
+document.querySelectorAll('.book').forEach((book) => {
+    const images = JSON.parse(book.getAttribute('data-images'));
+    let currentIndex = 0;
+    
+    book.addEventListener('click', function () {
+
+      currentIndex = (currentIndex + 1) % images.length;
+      
+      book.style.backgroundImage = `url("${images[currentIndex]}")`;
+   });
+});
 
 updateVideoCategory();
 changeVideo();
