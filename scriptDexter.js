@@ -78,9 +78,9 @@ const videosBySeason = [
         "https://mega.nz/embed/TB0XDBrI#1lSu2qz0Vn1CAuZ-braFLedd41RYsa7yRHrBOKyH2AM",
     ],
     [
-        "",
-        "",
-        "",
+        "https://mega.nz/embed/9zl1RBib#vKgWTR74EGKTg5uCKG2TsBPslmP5s-_0KIwbgNh-0HU",
+        "https://mega.nz/embed/UrF2WKAB#LTb4ikoAgm7gQOv5RxUABoHoZ0KEZTRZ4mNIS334IZs",
+        "https://mega.nz/embed/pvM11C5K#perZqQJusygnxfKLmO7zB2vrq1cPRoSz99EKRnDM2vs",
         "",
         "",
         "",
