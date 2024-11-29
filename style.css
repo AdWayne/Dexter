@@ -39,7 +39,7 @@ h1 {
 }
 
 .project:hover {
-   background-color: #333333;
+   background-color: #e50914;
    transform: scale(1.02);
 }
 
@@ -301,8 +301,12 @@ html {
   scroll-behavior: smooth;
 }
 
+.sniz{
+  height: 500px;
+}
+
 .awards-table {
-  width: 75%;
+  width: 72%;
   height: 70%;
   border-collapse: collapse;
   background: #ffffff;
@@ -310,6 +314,7 @@ html {
   margin-top: 20px;
   flex-grow: 1;
 }
+
 .awards-table th {
   border: 1px solid;
   padding: 10px;
@@ -321,8 +326,8 @@ html {
   border: 1px solid;
   text-align: left;
   padding: 10px;
-  height: 34px;
-  line-height: 34px;
+  height: 50px;
+  line-height: 50px;
 }
 
 tbody tr:nth-child(even) {
@@ -421,23 +426,28 @@ nav a:hover {
 }
 
 .biography {
-  margin-bottom: 220px;
+  margin-bottom: 67px;
 }
 .audio {
   margin-bottom: 200px;
 }
 .work {
-  margin-bottom: 90px;
+  margin-bottom: 80px;
 }
 .achievements {
-  margin-bottom: 190px;
+  margin-bottom: 50px;
 }
+
+.jetistikter{
+margin-top: 70px;
+}
+
 .bio-text {
   font-size: 1.2em;
   line-height: 1.8;
   text-align: justify;
   margin: auto;
-  max-width: 80%;
+  max-width: 90%;
 }
 
 .bio-text-trailer{
@@ -531,6 +541,7 @@ a:visited {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
   transition: transform 0.3s ease;
 }
+
 .videos {
   text-align: center;
 }
@@ -664,5 +675,17 @@ iframe {
   .fade-in.visible {
     opacity: 1;
     transform: translateX(0);
+  }
+
+  .season-img {
+    height: 330px;
+    width: 220px;
+    padding: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .season-img:hover {
+    transform: scale(1.1);
   }
 }
