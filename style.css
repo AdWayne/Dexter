@@ -7,24 +7,19 @@ body {
   color: #fff;
   line-height: 1.6;
   max-width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .rating-container {
-    width: 80%;
-    max-width: 900px;
-    margin: auto;
-    position: absolute;
-    bottom: 10%; /* Отступ снизу (регулируется, чтобы было чуть выше нижнего края) */
-    left: 50%; /* Центрирование по горизонтали */
-    transform: translateX(-50%); /* Сдвиг только по оси X для центрирования */
-    padding: 20px;
-    background-color: #1a1a1a;
-    border: 1px solid #2c2c2c;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #1a1a1a;
+  border: 1px solid #2c2c2c;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 
