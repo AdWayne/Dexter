@@ -128,9 +128,9 @@ const videosBySeason = [
         "https://mega.nz/embed/xwYFiLBB#WVygkeZc8cWuQUTl8UR3LfY88XVgMQYnTlIJOHwxyOQ",
         "https://mega.nz/embed/rE8mCYzT#xzOGcHrBApqJG_UkS5D5gJh8MGTsA3zs0g2PtSoUC30",
         "https://mega.nz/embed/2d8SHTaC#yAlLloR0RaDVFLipMw-D9kj3n1kPRoOgL0W_nvPTb3A",
-        "",
-        "",
-        "",
+        "https://mega.nz/embed/CVkjUZLI#LcjLhYBeoFbm2VnnA_iM7IyC3hlA1tgUGZ4HI8bDhl4",
+        "https://mega.nz/embed/1781GJrI#Ua9oQykBT89n1bN76dVT6F-KNWclHHFo20OcqYEfQww",
+        "https://mega.nz/embed/Yv0UCSIa#DtuKMce9pH14WxDleIuTQ8scK6bqQzcfuQwcH3qdjJ0",
         "https://mega.nz/embed/TI5wGY7C#E_-cvuem7swup08orDtPbx85mp_ZD6H-sBVNhpK8q64",
     ],
 ];
