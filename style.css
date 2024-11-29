@@ -7,6 +7,9 @@ body {
   color: #fff;
   line-height: 1.6;
   max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .rating-container {
