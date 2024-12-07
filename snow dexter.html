@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dexter: New Blood</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon snow/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon snow/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon snow/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon snow/site.webmanifest" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Roboto", sans-serif;
+        color: white;
+        background-color: #000;
+        overflow: scroll;
+      }
+
+      ::-webkit-scrollbar {
+        display: none;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #000;
+        padding: 10px 50px;
+      }
+
+      .nav-left img {
+        height: 40px;
+        margin-bottom: 680px;
+        margin-left: -25px;
+        cursor: pointer;
+      }
+
+      .menu {
+        display: none;
+        position: absolute;
+        top: 50px;
+        left: 10px;
+        background-color: #000000;
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+        width: 200px;
+        z-index: 10;
+      }
+
+      .menu a {
+        display: block;
+        color: white;
+        text-decoration: none;
+        padding: 5px;
+        margin: 5px 0;
+        z-index: 5;
+      }
+
+      .menu a:hover {
+        background-color: #000000;
+        z-index: 1000;
+      }
+
+      .hero {
+        position: relative;
+        height: 100vh;
+        background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 4)),
+          url("https://m.media-amazon.com/images/S/pv-target-images/b089cf532a1bf55339e66dc2e87564e387940443daf9e536e00dc9ec492e127e._SX1080_FMjpg_.jpg")
+            no-repeat center center/cover;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0 50px;
+        overflow: hidden;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 50%;
+        height: 100%;
+        z-index: 0;
+      }
+
+      .hero-content {
+        max-width: 600px;
+        z-index: 1;
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+        line-height: 1.6;
+      }
+
+      .info {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 20px;
+      }
+
+      .info span {
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        background-color: transparent;
+        padding: 5px 10px;
+        border-radius: 5px;
+      }
+
+      .drama-link {
+        display: inline-block;
+        color: rgb(77, 144, 191);
+        text-decoration: none;
+        background-color: rgb(255, 255, 255);
+        padding: 10px 15px;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+
+      .drama-link:hover {
+        background-color: rgb(77, 144, 191);
+        color: white;
+      }
+
+      h2 {
+        text-align: center;
+        font-size: 2.5em;
+        color: #ffffff;
+        margin: 20px 0;
+      }
+
+      .carousel-container {
+        width: 70%;
+        max-width: 100%;
+        margin: 30px auto;
+        position: relative;
+        overflow: hidden;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        background: #000000;
+      }
+
+      .carousel-track {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      .carousel-item {
+        flex: 0 0 33.33%; /* Три элемента видны одновременно */
+        box-sizing: border-box;
+        padding: 10px;
+        text-align: center;
+      }
+
+      .carousel-item img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      .carousel-item img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      }
+
+      .carousel-item a {
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 1.2em;
+        display: block;
+        transition: color 0.3s;
+      }
+
+      .carousel-item a:hover {
+        color: #007bff;
+      }
+
+      /* Кнопки управления */
+      .carousel-controls {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 10px;
+      }
+
+      .carousel-button {
+        background: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        border: none;
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.3s;
+      }
+
+      .carousel-button:hover {
+        background: rgba(0, 0, 0, 0.8);
+      }
+
+      .carousel-button:disabled {
+        background: rgba(0, 0, 0, 0.3);
+        cursor: not-allowed;
+      }
+
+      #Serial {
+        text-align: center;
+        margin: 20px 0;
+      }
+
+      #videoPlayer {
+        width: 100%;
+        max-width: 800px;
+        height: 450px;
+        border: 2px solid #ffffff;
+        border-radius: 8px;
+        margin: 0 auto;
+        display: none;
+      }
+
+      .episode-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 20px;
+      }
+
+      .episode-card {
+        width: 200px;
+        background: #000000;
+        margin: 10px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        cursor: pointer;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      .episode-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      }
+
+      .episode-card img {
+        width: 100%;
+        height: 120px;
+        object-fit: cover;
+      }
+
+      .episode-card h3 {
+        margin: 0;
+        padding: 10px;
+        font-size: 1.1em;
+        color: #007bff;
+      }
+
+      .episode-card p {
+        margin: 0;
+        padding: 0 10px 10px;
+        font-size: 0.9em;
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="menu" id="menu">
+      <a href="#Serial">Эпизоды</a>
+      <a href="#Info">Инфо</a>
+    </div>
+    <section class="hero">
+      <div class="nav-left">
+        <img
+          src="https://thumb.canalplus.pro/http/unsafe/760x428/filters:quality(80)/img-hapi.canalplus.pro:80/ServiceImage/ImageID/114762844"
+          alt="Menu"
+          id="menuButton"
+        />
+      </div>
+      <div class="hero-content">
+        <h1>Dexter: New Blood</h1>
+        <p>
+          Декстер Морган пропал, считается погибшим и живет жизнью без убийств
+          под вымышленным именем, когда появляется его сын. Выведенный из
+          равновесия, Декстер вскоре обнаруживает, что его Темный Пассажир жив и
+          здоров, и что у него очень опасная компания в Айрон-Лейк, штат
+          Нью-Йорк
+        </p>
+        <div class="info">
+          <span>IMDb 8.0</span>
+          <span>2022</span>
+          <span>18+</span>
+        </div>
+        <a href="#Serial" class="drama-link">Сериалы</a>
+      </div>
+    </section>
+
+    
+<div class="box">
+    <section class="carousel-container" id="Info">
+      <h2>Режиссер и Актеры</h2>
+      <div class="carousel-track">
+        <div class="carousel-item">
+          <a href="https://en.wikipedia.org/wiki/Marcos_Siega">
+            <img
+              src="https://cdn.stationfilm.com/wp-content/uploads/2023/03/06181930/Marcos_Siega_Bio.jpg"
+              alt="Marcos Siega"
+            />
+            Marcos Siega
+          </a>
+        </div>
+
+        <div class="carousel-item">
+          <a href="https://en.wikipedia.org/wiki/Michael_C._Hall">
+            <img
+              src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/cd3af9fe-5add-468a-a3a8-794e1c44a608.__CR0,0,220,220_PT0_SX220_V1___.jpg"
+              alt="Michael C. Hall"
+            />
+            Michael C. Hall
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="https://en.wikipedia.org/wiki/Jack_Alcott">
+            <img
+              src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/ecd730bf-1d6c-49bb-9a2b-f0c5afddcf43.__CR0,0,220,220_PT0_SX220_V1___.jpg"
+              alt="Jack Alcott"
+            />
+            Jack Alcott
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="https://en.wikipedia.org/wiki/Julia_Jones">
+            <img
+              src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/a6964e42-b33d-436b-a532-5e9519fcf7a7.__CR0,0,220,220_PT0_SX220_V1___.jpg"
+              alt="Julia Jones"
+            />
+            Julia Jones
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="https://en.wikipedia.org/wiki/Michael_C._Hall">
+            <img
+              src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/97675f35-2370-4fd2-83f0-bc3bf0e8da35.__CR0,0,220,220_PT0_SX220_V1___.jpg"
+              alt="Debra Morgan"
+            />
+            Jennifer Carpenter
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="https://en.wikipedia.org/wiki/Michael_C._Hall">
+            <img
+              src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/7336259d-8114-4223-a6d8-9837f83e8c66.__CR0,0,220,220_PT0_SX220_V1___.jpg"
+              alt="Michael C. Hall"
+            />
+            Johnny Sequoyah
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="https://en.wikipedia.org/wiki/Michael_C._Hall">
+            <img
+              src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/74f3f8ee-3264-4068-ae0c-16cfb20176e2.__CR0,0,220,220_PT0_SX220_V1___.jpg"
+              alt="Michael C. Hall"
+            />
+            Clancy Brown
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="https://en.wikipedia.org/wiki/Michael_C._Hall">
+            <img
+              src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/6abcc4c8-e992-4f58-a834-7d4f01aacb6b.__CR0,0,220,220_PT0_SX220_V1___.jpg"
+              alt="Michael C. Hall"
+            />
+            Alano Miller
+          </a>
+        </div>
+      </div>
+      <div class="carousel-controls">
+        <button class="carousel-button prev">❮</button>
+        <button class="carousel-button next">❯</button>
+      </div>
+    </section>
+</div>
+
+    <section id="Serial">
+      <iframe
+        id="videoPlayer"
+        width="640"
+        height="360"
+        frameborder="0"
+        allowfullscreen
+      ></iframe>
+    </section>
+
+    <div class="episode-container">
+      <!-- Карточки эпизодов -->
+      <div
+        class="episode-card"
+        data-video="https://mega.nz/embed/Li5k3QRa#tlMdvRIXpD2B7NLGdPgVz6uYZ07EcOAW3P03J773GF0"
+      >
+        <img
+          src="https://images.iptv.rt.ru/imo/transform/profile=episodepreview400x228/images/c6tnv9rir4sslltrqtpg.jpg"
+          alt="Episode 1"
+        />
+        <h3>Эпизод 1</h3>
+        <p>Резкое похолодание</p>
+      </div>
+      <div
+        class="episode-card"
+        data-video="https://mega.nz/embed/jrxDwIZY#59PdBUR8dAGMfFF-Dem4J_I612xb8wabGJshCiBmUao"
+      >
+        <img src="https://images.iptv.rt.ru/imo/transform/profile=episodepreview400x228/images/c6tnvabir4sslltrqtr0.jpg" alt="Episode 2" />
+        <h3>Эпизод 2</h3>
+        <p>Долбаная буря</p>
+      </div>
+      <div
+        class="episode-card"
+        data-video="https://mega.nz/embed/3joFGahL#A2F_mn8uZRG3qjvNfUAJh7XXbeT_lQn_16dwBP6n-ms"
+      >
+        <img src="https://images.iptv.rt.ru/imo/transform/profile=episodepreview400x228/images/c6tnvarir4sslltrqtsg.jpg" alt="Episode 3" />
+        <h3>Эпизод 3</h3>
+        <p>Дымовые сигналы</p>
+      </div>
+      <div
+        class="episode-card"
+        data-video="https://mega.nz/embed/G7ZDESCL#ERhJD2ddtNBY7MTgWNCIB21WzUzJUSDVCPA7-62cz7w">
+        <img src="https://images.iptv.rt.ru/imo/transform/profile=episodepreview400x228/images/c6tnvb3ir4sslltrqtu0.jpg" alt="Episode 4" />
+        <h3>Эпизод 4</h3>
+        <p>Г — значит герой</p>
+      </div>
+      <div class="episode-card" data-video="https://mega.nz/embed/TjgnXa5L#_pMdxeCp27hdeboRL5mlhQ1NQpVZ-j7UrCOkDYuz0rU">
+        <img src="https://images.iptv.rt.ru/imo/transform/profile=episodepreview400x228/images/c6tnvbjir4sslltrqtvg.jpg" alt="Episode 5" />
+        <h3>Эпизод 5</h3>
+        <p>Побег</p>
+      </div>
+      <div class="episode-card" data-video="https://mega.nz/embed/PygTCbQa#OSqyq67AOT6BIMNSmNdfbTMzCak_mEtBeouR3mlQL8w">
+        <img src="https://images.iptv.rt.ru/imo/transform/profile=episodepreview400x228/images/c6tnvc3ir4sslltrqu10.jpg" alt="Episode 6" />
+        <h3>Эпизод 6</h3>
+        <p>Слишком много сэндвичей с тунцом</p>
+      </div>
+      <div class="episode-card" data-video="https://mega.nz/embed/mvQHiIyZ#_vaLUOjMkMzT56oFRb5CXVYkUHp35S-zmp4I5JUdlMU">
+        <img src="https://images.iptv.rt.ru/imo/transform/profile=episodepreview400x228/images/caubqb3ir4ssllu4h7fg.jpg" alt="Episode 7" />
+        <h3>Эпизод 7</h3>
+        <p>В последний момент</p>
+      </div>
+      <div class="episode-card" data-video="https://mega.nz/embed/r6JCEaiZ#eSqQkJItaikfAW3sBGKSMMRW21sKRxg-1j2YR3oQovM">
+        <img src="https://images.iptv.rt.ru/imo/transform/profile=episodepreview400x228/images/cau4aijir4ssllu2bdfg.jpg" alt="Episode 8" />
+        <h3>Эпизод 8</h3>
+        <p>Нечестная игра</p>
+      </div>
+      <div class="episode-card" data-video="https://mega.nz/embed/muwTER6S#sCJvLxv2Ugo9xsmLo7HQ5waJEH8pEtmJ9T9-zgQPjeg">
+        <img src="https://images.iptv.rt.ru/imo/transform/profile=episodepreview400x228/images/cau4dr3ir4ssllu2c600.jpg" alt="Episode 9" />
+        <h3>Эпизод 9</h3>
+        <p>Семейное дело</p>
+      </div>
+      <div class="episode-card" data-video="https://mega.nz/embed/2n4FmJoS#P15QNB74DX3LcXBv8O_cHy0VEKr6PVC-EgXrUqJQTUE">
+        <img src="https://images.iptv.rt.ru/imo/transform/profile=episodepreview400x228/images/caubspjir4ssllu4hq30.jpg" alt="Episode 10" />
+        <h3>Эпизод 10</h3>
+        <p>Грехи отца</p>
+      </div>
+    </div>
+    <br />
+    <hr />
+
+    <script>
+      const menuButton = document.getElementById("menuButton");
+      const menu = document.getElementById("menu");
+
+      menuButton.addEventListener("click", () => {
+        menu.style.display = menu.style.display === "block" ? "none" : "block";
+      });
+      const track = document.querySelector(".carousel-track");
+      const items = Array.from(track.children);
+      const prevButton = document.querySelector(".prev");
+      const nextButton = document.querySelector(".next");
+      const itemWidth = items[0].getBoundingClientRect().width;
+
+      let currentIndex = 0;
+
+      function updateCarousel() {
+        track.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+      }
+
+      function moveNext() {
+        currentIndex = Math.min(currentIndex + 1, items.length - 3);
+        updateCarousel();
+      }
+
+      function movePrev() {
+        currentIndex = Math.max(currentIndex - 1, 0);
+        updateCarousel();
+      }
+
+      function autoSlide() {
+        if (currentIndex < items.length - 3) {
+          moveNext();
+        } else {
+          currentIndex = 0;
+          updateCarousel();
+        }
+      }
+
+      prevButton.addEventListener("click", movePrev);
+      nextButton.addEventListener("click", moveNext);
+
+      setInterval(autoSlide, 5000);
+
+      const videoPlayer = document.getElementById("videoPlayer");
+      const episodeCards = document.querySelectorAll(".episode-card");
+
+      episodeCards.forEach((card) => {
+        card.addEventListener("click", () => {
+          const videoUrl = card.getAttribute("data-video");
+          if (videoUrl) {
+            videoPlayer.src = videoUrl;
+            videoPlayer.style.display = "block";
+            videoPlayer.scrollIntoView({ behavior: "smooth" });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
