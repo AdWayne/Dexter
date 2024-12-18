@@ -684,7 +684,7 @@ iframe {
     width: 220px;
     padding: 10px;
     cursor: pointer;
-    transition: transform 1s ease;
+    transition: transform 0.3s ease;
   }
   
   .season-img:hover {
