@@ -91,7 +91,7 @@ h1 {
   padding: 10px 0;
   border-radius: 5px;
   z-index: 1;
-  right: -15px;
+  right: -7px;
 }
 
 .dropdown-content a {
@@ -563,9 +563,7 @@ iframe {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 @media (max-width: 1200px) {
-  *{
-    max-width: 100%;
-  }
+
   header h1 {
     font-size: 2.5em;
     letter-spacing: 2px;
@@ -625,15 +623,7 @@ iframe {
   }
 
   nav {
-    align-items: center;
-    justify-content: center;
-    background-color: #141414;
-    padding: 20px;
-    border-bottom: 2px solid #e50914;
-    position: sticky;
-    top: 0;
-    z-index: 1000px;
-    margin-bottom: 25px;
+    max-width: 100%;
   }
 
   nav a {
