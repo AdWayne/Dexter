@@ -6,7 +6,6 @@ body {
   background-color: #141414;
   color: #fff;
   line-height: 1.6;
-  max-width: 100%;
 }
 
 .rating-container {
@@ -562,6 +561,7 @@ iframe {
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
+
 @media (max-width: 1200px) {
 
   header h1 {
@@ -623,13 +623,22 @@ iframe {
   }
 
   nav {
-    max-width: 100%;
+    font-size: 0.9em;
+    justify-content: space-around;
+    justify-content: center; 
+    align-items: flex-start;
   }
-
+  .dropdown{
+    left: 0%;
+  }
+  .dropdown-content{
+    right: -25px;
+  }
   nav a {
-    font-size: 1em;
-    padding: 15px;
+    font-size: 0.9em;
+    padding: 10px;
     margin: 5px 0;
+    line-height: 2.6;
   }
 
   button {
