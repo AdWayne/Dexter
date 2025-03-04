@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
 const videoPlayer = document.getElementById("videoPlayer");
 const videoCategory = document.getElementById("videoCategory");
 const seasonSelect = document.getElementById("seasonSelect");
+videoPlayer.scrollIntoView({ behavior: "smooth" });
 
 const videosBySeason = [
     [
