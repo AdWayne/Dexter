@@ -23,17 +23,17 @@ videoPlayer.scrollIntoView({ behavior: "smooth" });
 
 const videosBySeason = [
     [
-        "https://mega.nz/embed/SUNgHSZK#7gzHGI2t8Oq2xBjuM3NBTwkKnABZsUSsocRZaENOG4Y",
-        "https://mega.nz/embed/nQFQnJbB#-genoue6JVC-oz8MXQneEloJmdm0qLK-GtKDY7YcvH0",
-        "https://mega.nz/embed/rBdQ3aQA#9kO394xMeCB2pzb6b49Tzn9GXBW0clxbom8qWsQ0h-I",
-        "https://mega.nz/embed/zIUzWJwI#o0Ani9VIosZxjBOFv7RRp96PRTR-R0P4JmWI83C0uwg",
+        "https://mega.nz/embed/aAsWwIpD#5UZ4_308y5ppfZH41JWWS68IPppFQBaODpNZR58izko",
+        "https://mega.nz/embed/WQcwlK6b#gcNtaNOAkXgZNs4872iR_oPPZmvUk0RsW08dwjYge6E",
+        "https://mega.nz/embed/mMNg3JZQ#nc0DjrFg-cB6EMAocsGrjbSBWv2BhRZiElehzJAq25g",
+        "https://mega.nz/embed/6RsGVByI#HQAcOOZF-EBNXVckJIiGPaGzGEBICEsTHjseZzc-RRw",
         "https://mega.nz/embed/qF1G1T6I#0mOXNsK3iKXh6EvDbIFDFF2xNojqZ7DiDohwiyLhqLw",
-        "https://mega.nz/embed/DJ8lgB4I#oo7e_VaQ8VLbFs9W2dZKJbXzoLf4rfjNdkMmNA7uJLc",
-        "https://mega.nz/embed/rQd2za7Q#Q5RQNgs-KlgjpjHSYTgR8M1DZnfA1nJO6YHczeDNJSk",
-        "https://mega.nz/embed/7dcAHSaZ#cipe_x3mXcEgZZJeTjFbsfzBOx8ZqYS_2L_WZjVr6Pw",
-        "https://mega.nz/embed/GcswRBiL#rKKI8YF5l5EKZ9BzbMxJFAv3AIdV0nqCPzLOzt6_rww",
+        "https://mega.nz/embed/aFdTwTLA#m7W3E4kIyzOWJggP0vaBC_82B-pG-rbg6U9srPWIvnY",
+        "https://mega.nz/embed/HJdXyIrD#rA7oAjoa_8j3HW6FLZ2OezSGG0tYZ6Jw97mrIf06yxg",
+        "https://mega.nz/embed/yAljHaQC#21b5DbNRRxutX_ilGzfBWzb78S25s01Y7C6XCA8PaIU",
+        "https://mega.nz/embed/CAE0wIKI#mlTu7CkrycSWBbTkFRo7sGKRpF_cvhQ1yFfn4tYI_v4",
         "https://mega.nz/embed/zIVDkR6B#8mrbSpKdfBmO-rPVE1NBG0DzellnWgnCOLJ9L48r58c",
-        "https://mega.nz/embed/PcNCxb4T#-QTrs81mvgM7-Rtx_jLRopHYjSbZbjCw5DzHOyy9uro",
+        "https://mega.nz/embed/SZdDQboK#CkcvMJM7HbDnSFC7-v23uciBtkEvARFaCtDCKPbiitQ",
         "https://mega.nz/embed/zJ12kBrT#kJsC40ksuuN8h61CMi1mvwdNCWeQcuQBYHuVemi14og",
     ],
     [
