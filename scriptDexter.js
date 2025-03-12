@@ -184,6 +184,19 @@ function nextVideo() {
         changeVideo();
     }
 }
+function moveToPlayer(img) {
+    let container = document.getElementById('selectedImageContainer');
+    
+    container.innerHTML = '';
+    let clonedImg = img.cloneNode(true);
+    clonedImg.style.width = '200px'; 
+    clonedImg.style.display = 'block';
+    clonedImg.style.margin = '10px auto';
+    
+    container.appendChild(clonedImg);
+
+    document.getElementById('video-container').scrollIntoView({ behavior: 'smooth' });
+}
 
 function playSeason(seasonIndex) {
     if (seasonIndex >= 0 && seasonIndex < videosBySeason.length) {
