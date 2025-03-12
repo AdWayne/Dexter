@@ -193,8 +193,11 @@
             <option value="6">Сезон 7</option>
             <option value="7">Сезон 8</option>
         </select>
-        <select id="videoCategory"></select>
-          <iframe id="videoPlayer" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+        <div id="video-container">
+    <select id="videoCategory"></select>
+    <div id="selectedImageContainer"></div>
+    <iframe id="videoPlayer" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+</div>
           <br>
         <button onclick="previousVideo()">Алдыңғы</button>
         <button onclick="nextVideo()">Келесі</button>
